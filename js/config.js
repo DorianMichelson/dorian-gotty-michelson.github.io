@@ -13,5 +13,13 @@ window.SITE_CONFIG = {
   // Formulaire de contact : créer un formulaire gratuit sur https://formspree.io
   // puis coller ici son adresse, ex. "https://formspree.io/f/abcdwxyz".
   // Tant que c'est vide, le bouton ouvre la messagerie du visiteur avec le message prérempli.
-  formEndpoint: ""
+  formEndpoint: "",
+
+  // Statistiques de visite (Umami, gratuit et sans cookie) : voir le README.
+  // Coller ici le "Website ID" donné par Umami, ex. "1a2b3c4d-5e6f-...".
+  // Tant que c'est vide, aucune statistique n'est collectée.
+    umamiWebsiteId: "9c357a19-61d5-49ce-b714-31165bdf7174"
+
+  // Les visites ne sont comptées que sur ce domaine (pas quand tu ouvres le site en local).
+  statsDomain: "dorianmichelson.github.io"
 };

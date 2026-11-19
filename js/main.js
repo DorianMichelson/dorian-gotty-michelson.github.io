@@ -177,6 +177,7 @@
         const body = encodeURIComponent(message + "\n\n" + name + " (" + email + ")");
         window.location.href = "mailto:" + cfg.email + "?subject=" + subject + "&body=" + body;
         setStatus(t("contact.mailto"), "info");
+        if (window.siteTrack) window.siteTrack("formulaire-contact", { mode: "messagerie" });
         return;
       }
 
@@ -191,6 +192,7 @@
         if (!res.ok) throw new Error("HTTP " + res.status);
         form.reset();
         setStatus(t("contact.sent"), "success");
+        if (window.siteTrack) window.siteTrack("formulaire-contact", { mode: "formspree" });
       } catch (err) {
         console.error(err);
         setStatus(t("contact.error"), "error");

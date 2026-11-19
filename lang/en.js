@@ -5,12 +5,15 @@ window.I18N.en = {
     title: "Dorian Gotty Michelson | Data Scientist Engineer",
     description: "Portfolio of Dorian Gotty Michelson, data scientist engineer in Toulouse, France: background, AI projects and articles that explain artificial intelligence.",
     iaTitle: "Understanding AI | Dorian Gotty Michelson",
+    sfTitle: "What I can do | Dorian Gotty Michelson",
+    sfDescription: "Ten interactive demos of my skills in machine learning, data and engineering.",
     iaDescription: "Six articles with interactive demos to understand artificial intelligence, no background needed."
   },
 
   nav: {
     skip: "Skip to content",
     about: "About",
+    skills: "What I can do",
     ai: "Understanding AI",
     contact: "Contact",
     language: "Language",
@@ -137,7 +140,189 @@ window.I18N.en = {
   },
 
   footer: {
-    made: "Designed and hand-coded in HTML, CSS and JavaScript."
+    made: "Designed and hand-coded in HTML, CSS and JavaScript.",
+    stats: "Anonymous, cookie-free visitor statistics (Umami)."
+  },
+
+  sf: {
+    title: "What I can do",
+    intro: "Ten short, interactive examples of the techniques I use. Click, drag, try things out: each card is a small sample of my work, with the equivalent Python code.",
+    note: "The data in these examples is fictional or simulated.",
+    cta: "See these skills in action",
+    groups: {
+      ml: "Machine learning",
+      data: "Data and visualization",
+      eng: "Engineering and systems"
+    },
+    code: "Show the Python code",
+    codeCs: "Show the C# equivalent (Entity Framework Core)",
+    career: "In my experience",
+
+    threshold: {
+      title: "Set a model’s alert threshold",
+      text: "A maintenance model gives each machine a risk score. Where should the alert threshold go? The lower it is, the more failures you catch, but the more false alarms you trigger.",
+      career: "Choosing the detection threshold in my final project on control valves.",
+      threshold: "Alert threshold",
+      normal: "Healthy machines",
+      faulty: "Machines about to fail",
+      score: "Risk score",
+      tp: "Failures caught",
+      fn: "Failures missed",
+      fp: "False alarms",
+      tn: "Healthy, left alone",
+      precision: "Precision",
+      precisionHelp: "of alerts are justified",
+      recall: "Recall",
+      recallHelp: "of failures are caught"
+    },
+
+    tree: {
+      title: "Explain a prediction",
+      text: "A decision tree predicts by asking simple questions. XGBoost combines hundreds of trees, but you can still explain what drove a decision. Set the valve’s condition and follow the path.",
+      career: "XGBoost failure prediction models in my final project.",
+      pressure: "Pressure",
+      temperature: "Temperature",
+      age: "Valve age",
+      years: "years",
+      risk: "Failure risk",
+      low: "Low",
+      medium: "Moderate",
+      high: "High",
+      yes: "yes",
+      no: "no",
+      qAge: "Older than 8 years?",
+      qPressure: "Pressure above 7 bar?",
+      qTemp90: "Temperature above 90 °C?",
+      qTemp100: "Temperature above 100 °C?"
+    },
+
+    kmeans: {
+      title: "Group data without labels",
+      text: "The k-means algorithm finds groups of similar points on its own: customer profiles, types of failures, operating modes of a machine. Click inside the frame to add points.",
+      k: "Number of groups",
+      step: "One step",
+      run: "Group",
+      newData: "New data",
+      iter: "Iterations",
+      done: "The centers have stopped moving: the algorithm has converged."
+    },
+
+    sentiment: {
+      title: "Analyze the tone of a text",
+      text: "Natural language processing sorts customer reviews, emails or support tickets. This simplified version relies on a word list; in production, I would use a Transformer model through Hugging Face.",
+      career: "Language processing (LSTM, attention, Hugging Face) in my image captioning project.",
+      input: "Text to analyze",
+      examples: [
+        "The service was fast and the team really friendly.",
+        "Late delivery and damaged product, very disappointed.",
+        "The product is not bad, but the price is too high."
+      ],
+      positive: "Positive",
+      negative: "Negative",
+      neutral: "Neutral",
+      score: "Score",
+      lexicon: {
+        pos: ["fast", "quick", "friendly", "excellent", "great", "perfect", "good", "nice", "awesome", "efficient", "satisfied", "recommend", "clean", "clear", "helpful", "happy", "reliable", "simple", "thanks", "love", "pleasant", "responsive"],
+        neg: ["slow", "late", "damaged", "disappointed", "disappointing", "bad", "expensive", "high", "problem", "broken", "dirty", "awful", "horrible", "complicated", "noisy", "useless", "never", "poor", "worst", "rude"],
+        negators: ["not", "no", "never", "isn", "wasn", "don", "doesn", "didn"]
+      }
+    },
+
+    forecast: {
+      title: "Forecast a time series",
+      text: "What will the temperature be each month next year? The method learns from the past, then its error is measured on a year it has never seen. Compare three approaches.",
+      career: "AI models integrated into Météo France’s supercomputer, and LSTMs on time series in my final project.",
+      mean: "Average",
+      trend: "Trend",
+      seasonal: "Seasons + trend",
+      meanHelp: "Always predicts the past average.",
+      trendHelp: "Extends the overall trend, ignoring seasons.",
+      seasonalHelp: "Repeats the seasonal cycle and adds the trend.",
+      history: "History",
+      actual: "Actual (test year)",
+      forecast: "Forecast",
+      error: "Mean error",
+      newData: "New series"
+    },
+
+    cleaning: {
+      title: "Clean raw data",
+      text: "Before any model comes imperfect data: duplicates, missing values, inconsistent formats, outliers. Apply each step and watch the table fix itself.",
+      career: "Data management and processing during my work-study at Occitaline.",
+      sensor: "Sensor",
+      date: "Date",
+      pressure: "Pressure (bar)",
+      dup: "Remove duplicates",
+      num: "Convert numbers",
+      dates: "Standardize dates",
+      fill: "Fill missing values",
+      outliers: "Remove outliers",
+      remaining: "Issues left",
+      clean: "Clean data, ready for training.",
+      reset: "Start over"
+    },
+
+    sql: {
+      title: "Query a database",
+      text: "A task database, like the one in my project management software. Pick a question: here is the SQL query that answers it, and its result.",
+      career: "SQL databases during my work-study, and SQL Server with Entity Framework Core in my task management software.",
+      table: "Table tasks",
+      result: "Result",
+      rows: "rows",
+      queries: [
+        { label: "Urgent tasks not yet done", sql: "SELECT title, owner, days\nFROM tasks\nWHERE priority = 'high' AND status <> 'done'\nORDER BY days DESC;" },
+        { label: "Workload per person", sql: "SELECT owner, COUNT(*) AS task_count, SUM(days) AS days\nFROM tasks\nGROUP BY owner\nORDER BY days DESC;" },
+        { label: "Project progress", sql: "SELECT status, COUNT(*) AS n,\n       ROUND(100.0 * COUNT(*) / (SELECT COUNT(*) FROM tasks)) AS pct\nFROM tasks\nGROUP BY status;" }
+      ],
+      cols: { id: "id", title: "title", owner: "owner", priority: "priority", status: "status", days: "days", count: "task_count", n: "n", pct: "pct" },
+      priority: { high: "high", medium: "medium", low: "low" },
+      status: { todo: "to do", doing: "in progress", done: "done" },
+      titles: ["Collect sensor data", "Clean the dataset", "Train the model", "Build the dashboard", "Write the documentation", "Write unit tests", "Deploy to production", "Present the results"]
+    },
+
+    dashboard: {
+      title: "Explore a dashboard",
+      text: "As in Power BI, click a site or a month to filter the whole dashboard. Click again to remove the filter.",
+      career: "Power BI valve monitoring dashboard in my final project.",
+      interventions: "Interventions",
+      failures: "Failures",
+      availability: "Availability",
+      bySite: "Interventions by site",
+      byMonth: "Failures by month",
+      all: "Show all",
+      filter: "Filter",
+      months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
+    },
+
+    parallel: {
+      title: "Speed up a computation in parallel",
+      text: "A supercomputer splits the work across many cores. But the part that cannot be split limits the gain: that is Amdahl’s law. Play with both settings.",
+      career: "Deploying AI models on Météo France’s operational supercomputer.",
+      cores: "Cores",
+      serial: "Non-parallel share",
+      run: "Run the computation",
+      time: "Duration",
+      speedup: "Speedup",
+      ideal: "theoretical maximum",
+      serialLabel: "Sequential part",
+      parallelLabel: "Tasks spread across cores",
+      core: "Core"
+    },
+
+    subnet: {
+      title: "Compute an IP subnet",
+      text: "To configure devices on a network, you need to know which addresses belong together. Enter an address and change the mask.",
+      career: "Plug-in that detects network modules and configures their IP addresses at SafeSquare.",
+      ip: "IP address",
+      prefix: "Mask",
+      mask: "Mask",
+      network: "Network address",
+      broadcast: "Broadcast address",
+      range: "Usable addresses",
+      hosts: "Possible devices",
+      binary: "In binary, the network part is colored",
+      invalid: "Invalid address: four numbers between 0 and 255, separated by dots."
+    }
   },
 
   ia: {

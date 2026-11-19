@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr" class="i18n-loading">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ce que je sais faire | Dorian Gotty Michelson</title>
+  <meta name="description" content="Dix démonstrations interactives de mes compétences en machine learning, données et ingénierie.">
+  <meta property="og:title" content="Ce que je sais faire | Dorian Gotty Michelson">
+  <meta property="og:description" content="Dix démonstrations interactives : machine learning, données, ingénierie.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js"></script>
+</head>
+<body data-title-key="meta.sfTitle" data-description-key="meta.sfDescription" data-page="skills">
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Dorian Gotty Michelson">
+        <span class="brand-mark" aria-hidden="true">DG</span>
+        <span class="brand-name">Dorian Gotty Michelson</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden" data-i18n="nav.menu">Menu</span>
+      </button>
+      <div class="nav-wrap" id="site-nav">
+        <nav aria-label="Navigation principale">
+          <ul class="nav-list">
+            <li><a href="index.html" data-nav="about" data-i18n="nav.about">À propos</a></li>
+            <li><a href="savoir-faire.html" data-nav="skills" data-i18n="nav.skills">Ce que je sais faire</a></li>
+            <li><a href="ia.html" data-nav="ai" data-i18n="nav.ai">Comprendre l’IA</a></li>
+            <li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-tools">
+          <label class="lang-picker">
+            <span class="visually-hidden" data-i18n="nav.language">Langue</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c2.6 2.8 2.6 15.2 0 18M12 3c-2.6 2.8-2.6 15.2 0 18" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+            <select data-lang-select></select>
+          </label>
+          <button class="theme-toggle" type="button" data-theme-toggle>
+            <svg class="icon-moon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <svg class="icon-sun" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span class="visually-hidden" data-theme-label></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-head">
+      <div class="container">
+        <h1 data-i18n="sf.title"></h1>
+        <p class="page-intro" data-i18n="sf.intro"></p>
+        <nav class="sf-jump" aria-label="Sections">
+          <a href="#ml" data-i18n="sf.groups.ml"></a>
+          <a href="#data" data-i18n="sf.groups.data"></a>
+          <a href="#eng" data-i18n="sf.groups.eng"></a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="sf-group" id="ml" aria-labelledby="g-ml">
+      <div class="container">
+        <h2 id="g-ml" data-i18n="sf.groups.ml"></h2>
+        <div class="sf-grid" data-sf-group="threshold tree kmeans sentiment forecast"></div>
+      </div>
+    </section>
+
+    <section class="sf-group" id="data" aria-labelledby="g-data">
+      <div class="container">
+        <h2 id="g-data" data-i18n="sf.groups.data"></h2>
+        <div class="sf-grid" data-sf-group="cleaning sql dashboard"></div>
+      </div>
+    </section>
+
+    <section class="sf-group" id="eng" aria-labelledby="g-eng">
+      <div class="container">
+        <h2 id="g-eng" data-i18n="sf.groups.eng"></h2>
+        <div class="sf-grid" data-sf-group="parallel subnet"></div>
+        <p class="sf-note" data-i18n="sf.note"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span data-year></span> Dorian Gotty Michelson</p>
+      <p data-i18n="footer.made"></p>
+      <p data-i18n="footer.stats"></p>
+    </div>
+  </footer>
+
+  <noscript><p class="noscript">Ce site a besoin de JavaScript pour afficher son contenu. This site needs JavaScript to display its content.</p></noscript>
+
+  <script src="js/config.js"></script>
+  <script src="lang/languages.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/skills-demos.js"></script>
+</body>
+</html>

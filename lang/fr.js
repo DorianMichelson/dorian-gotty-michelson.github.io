@@ -5,12 +5,15 @@ window.I18N.fr = {
     title: "Dorian Gotty Michelson | Ingénieur Data Scientist",
     description: "Portfolio de Dorian Gotty Michelson, ingénieur data scientist à Toulouse : parcours, projets en IA et articles pour comprendre l’intelligence artificielle.",
     iaTitle: "Comprendre l’IA | Dorian Gotty Michelson",
+    sfTitle: "Ce que je sais faire | Dorian Gotty Michelson",
+    sfDescription: "Dix démonstrations interactives de mes compétences en machine learning, données et ingénierie.",
     iaDescription: "Six articles illustrés de démonstrations interactives pour comprendre l’intelligence artificielle, sans prérequis."
   },
 
   nav: {
     skip: "Aller au contenu",
     about: "À propos",
+    skills: "Ce que je sais faire",
     ai: "Comprendre l’IA",
     contact: "Contact",
     language: "Langue",
@@ -137,7 +140,189 @@ window.I18N.fr = {
   },
 
   footer: {
-    made: "Site conçu et codé à la main en HTML, CSS et JavaScript."
+    made: "Site conçu et codé à la main en HTML, CSS et JavaScript.",
+    stats: "Mesure d’audience anonyme, sans cookie (Umami)."
+  },
+
+  sf: {
+    title: "Ce que je sais faire",
+    intro: "Dix exemples courts et interactifs des techniques que j’utilise. Cliquez, faites glisser, testez : chaque carte est un petit échantillon de mon travail, avec le code Python équivalent.",
+    note: "Les données de ces exemples sont fictives ou simulées.",
+    cta: "Voir ces compétences en action",
+    groups: {
+      ml: "Machine learning",
+      data: "Données et visualisation",
+      eng: "Ingénierie et systèmes"
+    },
+    code: "Voir le code Python",
+    codeCs: "Voir l’équivalent en C# (Entity Framework Core)",
+    career: "Dans mon parcours",
+
+    threshold: {
+      title: "Régler le seuil d’alerte d’un modèle",
+      text: "Un modèle de maintenance donne à chaque machine un score de risque. Où placer le seuil d’alerte ? Plus il est bas, plus on détecte de pannes, mais plus on déclenche de fausses alertes.",
+      career: "Choix du seuil de détection dans mon projet de fin d’études sur les vannes de contrôle.",
+      threshold: "Seuil d’alerte",
+      normal: "Machines saines",
+      faulty: "Machines qui vont tomber en panne",
+      score: "Score de risque",
+      tp: "Pannes détectées",
+      fn: "Pannes manquées",
+      fp: "Fausses alertes",
+      tn: "Saines, laissées tranquilles",
+      precision: "Précision",
+      precisionHelp: "des alertes sont justifiées",
+      recall: "Rappel",
+      recallHelp: "des pannes sont détectées"
+    },
+
+    tree: {
+      title: "Expliquer une prédiction",
+      text: "Un arbre de décision prédit en posant des questions simples. XGBoost combine des centaines d’arbres, mais on peut toujours expliquer ce qui a pesé dans une décision. Réglez l’état de la vanne et suivez le chemin.",
+      career: "Modèles XGBoost de prédiction de panne dans mon projet de fin d’études.",
+      pressure: "Pression",
+      temperature: "Température",
+      age: "Âge de la vanne",
+      years: "ans",
+      risk: "Risque de panne",
+      low: "Faible",
+      medium: "Modéré",
+      high: "Élevé",
+      yes: "oui",
+      no: "non",
+      qAge: "Âge supérieur à 8 ans ?",
+      qPressure: "Pression supérieure à 7 bar ?",
+      qTemp90: "Température supérieure à 90 °C ?",
+      qTemp100: "Température supérieure à 100 °C ?"
+    },
+
+    kmeans: {
+      title: "Regrouper des données sans étiquettes",
+      text: "L’algorithme k-means trouve tout seul des groupes de points qui se ressemblent : profils de clients, types de pannes, modes de fonctionnement d’une machine. Cliquez dans le cadre pour ajouter des points.",
+      k: "Nombre de groupes",
+      step: "Une étape",
+      run: "Regrouper",
+      newData: "Nouvelles données",
+      iter: "Itérations",
+      done: "Les centres ne bougent plus : l’algorithme a convergé."
+    },
+
+    sentiment: {
+      title: "Analyser le ton d’un texte",
+      text: "Le traitement du langage permet de trier des avis clients, des emails ou des tickets. Cette version simplifiée repose sur une liste de mots ; en production, j’utiliserais un modèle Transformer via Hugging Face.",
+      career: "Traitement du langage (LSTM, attention, Hugging Face) dans mon projet de génération de légendes d’images.",
+      input: "Texte à analyser",
+      examples: [
+        "Le service était rapide et l’équipe très agréable.",
+        "Livraison en retard et produit abîmé, très déçu.",
+        "Le produit n’est pas mauvais, mais le prix est trop élevé."
+      ],
+      positive: "Positif",
+      negative: "Négatif",
+      neutral: "Neutre",
+      score: "Score",
+      lexicon: {
+        pos: ["rapide", "agréable", "excellent", "excellente", "super", "parfait", "parfaite", "bon", "bonne", "bien", "génial", "géniale", "efficace", "satisfait", "satisfaite", "recommande", "propre", "clair", "claire", "aimable", "top", "heureux", "ravi", "ravie", "fiable", "simple", "merci", "réactif", "réactive"],
+        neg: ["lent", "lente", "retard", "abîmé", "abîmée", "déçu", "déçue", "mauvais", "mauvaise", "cher", "chère", "élevé", "problème", "panne", "sale", "nul", "nulle", "horrible", "compliqué", "compliquée", "cassé", "cassée", "bruyant", "décevant", "décevante", "inutile", "jamais"],
+        negators: ["pas", "plus", "ni", "aucun", "aucune"]
+      }
+    },
+
+    forecast: {
+      title: "Prévoir la suite d’une série temporelle",
+      text: "Quelle température fera-t-il chaque mois l’an prochain ? On entraîne la méthode sur le passé, puis on mesure son erreur sur une année qu’elle n’a jamais vue. Comparez trois approches.",
+      career: "Modèles d’IA intégrés au superordinateur de Météo France, et LSTM sur séries temporelles dans mon projet de fin d’études.",
+      mean: "Moyenne",
+      trend: "Tendance",
+      seasonal: "Saisons + tendance",
+      meanHelp: "Prédit toujours la moyenne du passé.",
+      trendHelp: "Prolonge la tendance générale, sans les saisons.",
+      seasonalHelp: "Reproduit le cycle des saisons et y ajoute la tendance.",
+      history: "Historique",
+      actual: "Réel (année de test)",
+      forecast: "Prévision",
+      error: "Erreur moyenne",
+      newData: "Nouvelle série"
+    },
+
+    cleaning: {
+      title: "Nettoyer des données brutes",
+      text: "Avant tout modèle, il y a des données imparfaites : doublons, valeurs manquantes, formats incohérents, mesures aberrantes. Appliquez chaque étape et regardez le tableau se corriger.",
+      career: "Gestion et traitement des données en alternance chez Occitaline.",
+      sensor: "Capteur",
+      date: "Date",
+      pressure: "Pression (bar)",
+      dup: "Supprimer les doublons",
+      num: "Convertir les nombres",
+      dates: "Uniformiser les dates",
+      fill: "Compléter les manques",
+      outliers: "Retirer les aberrations",
+      remaining: "Problèmes restants",
+      clean: "Données propres, prêtes pour l’entraînement.",
+      reset: "Recommencer"
+    },
+
+    sql: {
+      title: "Interroger une base de données",
+      text: "Une base de tâches, comme celle de mon logiciel de gestion de projet. Choisissez une question : voici la requête SQL qui y répond, et son résultat.",
+      career: "Bases SQL en alternance, et SQL Server avec Entity Framework Core dans mon logiciel de gestion de tâches.",
+      table: "Table taches",
+      result: "Résultat",
+      rows: "lignes",
+      queries: [
+        { label: "Tâches urgentes non terminées", sql: "SELECT titre, responsable, jours\nFROM taches\nWHERE priorite = 'haute' AND statut <> 'terminée'\nORDER BY jours DESC;" },
+        { label: "Charge de travail par personne", sql: "SELECT responsable, COUNT(*) AS nb_taches, SUM(jours) AS jours\nFROM taches\nGROUP BY responsable\nORDER BY jours DESC;" },
+        { label: "Avancement du projet", sql: "SELECT statut, COUNT(*) AS nb,\n       ROUND(100.0 * COUNT(*) / (SELECT COUNT(*) FROM taches)) AS pct\nFROM taches\nGROUP BY statut;" }
+      ],
+      cols: { id: "id", title: "titre", owner: "responsable", priority: "priorite", status: "statut", days: "jours", count: "nb_taches", n: "nb", pct: "pct" },
+      priority: { high: "haute", medium: "moyenne", low: "basse" },
+      status: { todo: "à faire", doing: "en cours", done: "terminée" },
+      titles: ["Collecter les données capteurs", "Nettoyer le jeu de données", "Entraîner le modèle", "Créer le tableau de bord", "Rédiger la documentation", "Écrire les tests unitaires", "Déployer en production", "Présenter les résultats"]
+    },
+
+    dashboard: {
+      title: "Explorer un tableau de bord",
+      text: "Comme dans Power BI, cliquez sur un site ou sur un mois pour filtrer tout le tableau. Cliquez à nouveau pour retirer le filtre.",
+      career: "Tableau de bord Power BI de suivi des vannes dans mon projet de fin d’études.",
+      interventions: "Interventions",
+      failures: "Pannes",
+      availability: "Disponibilité",
+      bySite: "Interventions par site",
+      byMonth: "Pannes par mois",
+      all: "Tout afficher",
+      filter: "Filtre",
+      months: ["Janv.", "Févr.", "Mars", "Avr.", "Mai", "Juin"]
+    },
+
+    parallel: {
+      title: "Accélérer un calcul en parallèle",
+      text: "Un supercalculateur répartit le travail entre de nombreux cœurs. Mais la partie qui ne se découpe pas limite le gain : c’est la loi d’Amdahl. Jouez avec les deux réglages.",
+      career: "Déploiement de modèles d’IA sur le superordinateur opérationnel de Météo France.",
+      cores: "Cœurs",
+      serial: "Partie non parallélisable",
+      run: "Lancer le calcul",
+      time: "Durée",
+      speedup: "Accélération",
+      ideal: "maximum théorique",
+      serialLabel: "Partie séquentielle",
+      parallelLabel: "Tâches réparties sur les cœurs",
+      core: "Cœur"
+    },
+
+    subnet: {
+      title: "Calculer un sous-réseau IP",
+      text: "Pour configurer des équipements sur un réseau, il faut savoir quelles adresses vont ensemble. Saisissez une adresse et faites varier le masque.",
+      career: "Plug-in de détection et de configuration IP de modules réseau chez SafeSquare.",
+      ip: "Adresse IP",
+      prefix: "Masque",
+      mask: "Masque",
+      network: "Adresse du réseau",
+      broadcast: "Adresse de diffusion",
+      range: "Adresses utilisables",
+      hosts: "Appareils possibles",
+      binary: "En binaire, la partie réseau est en couleur",
+      invalid: "Adresse invalide : quatre nombres entre 0 et 255, séparés par des points."
+    }
   },
 
   ia: {
