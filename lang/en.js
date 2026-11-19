@@ -112,11 +112,10 @@ window.I18N.en = {
     { name: "Spanish", level: "B1" }
   ],
 
-  // Placeholder texts: to be completed
   passions: [
-    { title: "Drums", text: "Fifteen years of playing, in a band." },
-    { title: "Tennis", text: "Text coming soon." },
-    { title: "Stand-up comedy", text: "Text coming soon." }
+    { title: "Drums", text: "Fifteen years of drumming and two bands taught me to work as a team: listening to others, keeping a shared tempo and finding my place in a group." },
+    { title: "Running", text: "I am a marathon runner. Running taught me that to be good in a team, you first have to be solid on your own: otherwise you hold back the others, who are waiting for you to master your own specialty." },
+    { title: "Stand-up comedy", text: "Getting on stage made me comfortable speaking in public. It is an asset I use in my professional life, to present a project or explain a technical result." }
   ],
 
   contact: {

@@ -112,11 +112,10 @@ window.I18N.fr = {
     { name: "Espagnol", level: "B1" }
   ],
 
-  // Textes provisoires : à compléter
   passions: [
-    { title: "Batterie", text: "Quinze ans de pratique, en groupe." },
-    { title: "Tennis", text: "Texte à venir." },
-    { title: "Stand-up", text: "Texte à venir." }
+    { title: "Batterie", text: "Quinze ans de batterie et deux groupes de musique m’ont appris à travailler en équipe : écouter les autres, tenir un rythme commun et trouver ma place dans un ensemble." },
+    { title: "Course à pied", text: "Je suis marathonien. La course m’a appris que, pour être bon en équipe, il faut d’abord être solide seul : sinon, on freine les autres, qui attendent qu’on maîtrise sa propre spécialité." },
+    { title: "Stand-up", text: "Monter sur scène m’a rendu à l’aise à l’oral. C’est un atout que je retrouve dans ma vie professionnelle, pour présenter un projet ou expliquer un résultat technique." }
   ],
 
   contact: {
